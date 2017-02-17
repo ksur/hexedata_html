@@ -1,0 +1,158 @@
+.post {
+	@include media-breakpoint-up(lg) {
+		padding-right: 30px;
+	}
+
+	h1 {
+		font-weight: $font-bold;
+		font-size: 3rem;
+		line-height: 0.83em;
+		margin-top: 2rem;
+		margin-bottom: 2.5rem;
+
+		+ p {
+			font-weight: $font-bold;
+			font-size: 1.15rem;
+			color: $color-primary;
+
+			&:after {
+				content: '';
+				display: block;
+				width: 70px;
+				height: 5px;
+				background-color: $color-primary;
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+
+	p, ul, ol {
+		font-size: 1rem;
+		margin-bottom: 1.5rem;
+	}
+
+	img {
+		display: block;
+		margin-bottom: 30px;
+
+		&.half-width {
+			width: 100%;
+
+			@include media-breakpoint-up(sm) {
+				width: calc(50% - 15px);
+				float: left;
+
+				+ .half-width {
+					float: right;
+				}
+			}
+		}
+
+		&.full-width {
+			width: 100%;
+		}
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.card-columns {
+	column-count: 1;
+	column-gap: $grid-gutter-width-base;
+
+	@include media-breakpoint-up(sm) {
+		column-count: 2;
+	}
+
+	.post-thumb {
+		margin-bottom: 42px;
+		border-bottom: 8px solid $color-grey-light;
+		-webkit-column-break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid-column;
+		@include clearfix;
+
+		img {
+			display: block;
+			width: 100%;
+			margin-bottom: 30px;
+		}
+
+		h3 {
+			font-weight: $font-bold;
+			font-size: 20px;
+			margin-bottom: 20px;
+		}
+
+		a {
+			background-color: #fff;
+			font-weight: $font-bold;
+			font-size: 16px;
+			text-transform: uppercase;
+			float: right;
+			margin-bottom: -17px;
+			padding-left: 18px;
+
+			&:after {
+				content: '';
+				display: inline-block;
+				width: 6px;
+				height: 10px;
+				background: url('../images/icons/icon-arrow-link.png') no-repeat 0 0;
+				vertical-align: 0;
+				margin-left: 10px;
+			}
+
+			&:hover {
+				&:after {
+					background-position: 100% 100%;
+				}
+			}
+		}
+	}
+}
+
+.news-section {
+	margin-bottom: 30px;
+	[class^="col"] {
+		background-color: #f9f9f9;
+		padding: 30px 40px;
+		&:nth-child(even) {
+			background-color: #f5f5f5;
+		}
+
+		@include media-breakpoint-between(sm, md) {
+			&:nth-child(n+2),
+			&:nth-child(n+3) {
+				background-color: #f5f5f5;
+			}
+
+			&:nth-child(4n) {
+				background-color: #f9f9f9;
+			}
+		}
+	}
+
+	h4 {
+		font-weight: $font-bold;
+		font-size: 18px;
+		color: $color-text-medium;
+		min-height: 80px;
+		margin: 0;
+	}
+
+	.btn {
+		text-transform: uppercase;
+
+		&:after {
+			content: '\e800';
+			display: inline-block;
+			font-family: $font-icons;
+			font-size: 10px;
+			margin-left: 10px;
+		}
+	}
+}

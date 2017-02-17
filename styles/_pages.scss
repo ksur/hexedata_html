@@ -1,0 +1,66 @@
+.contact {
+	.content-section {
+		padding-top: 15px;
+
+		@include media-breakpoint-up(lg) {
+			padding-top: 35px;
+		}
+	}
+
+	.content {
+		.box {
+			padding-top: 30px;
+
+			@include media-breakpoint-up(md) {
+				padding: 70px 60px 50px;
+			}
+			
+			.title {
+				text-transform: uppercase;
+			}
+
+			.btn {
+
+				@include media-breakpoint-up(lg) {
+					left: auto;
+					right: 30px;
+				}
+			}
+		}
+	}
+
+	.contact-sidebar {
+		padding: 20px;
+
+		h2 {
+			font-weight: $font-bold;
+			font-size: 1.15rem;
+			color: #385d6d;
+			margin-bottom: 40px;
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 70px;
+			}
+		}
+
+		p {
+			font-weight: $font-bold;
+			margin-bottom: 40px;
+
+			@include media-breakpoint-up(lg) {
+				margin-bottom: 50px;
+			}
+
+			~ p {
+				margin-bottom: 10px;
+			}
+
+			a, span {
+				font-weight: $font-bold;
+				font-size: 2rem;
+				line-height: 1.2;
+				color: $color-primary;
+			}
+		}
+	}
+}

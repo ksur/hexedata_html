@@ -1,0 +1,8 @@
+@mixin link-color-text($color:$color-text-medium) {
+  color: $color;
+
+  &:focus,
+  &:hover {
+    color: $color-primary-contrast;
+  }
+}

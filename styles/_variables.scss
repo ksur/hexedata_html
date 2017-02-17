@@ -1,0 +1,29 @@
+/* Colors */
+$color-primary: #76889a;
+$color-primary-contrast: #686582;
+$color-secondary: #aac7b9;
+$color-text-primary: #231f20;
+$color-text-secondary: #212838;
+$color-text-medium: #666;
+$color-grey-medium: #dedede;
+$color-grey-light: #f7f7f7;
+
+/* Fonts */
+@font-face {
+  font-family: 'fontello';
+  src: url('../fonts/fontello.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/fontello.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/fontello.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/fontello.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/fontello.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/fontello.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+$font-primary: 'Alegreya Sans', sans-serif;
+$font-icons: 'fontello';
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 500;
+$font-bold: 700;
+$font-extra-bold: 800;
+$font-black: 900;
